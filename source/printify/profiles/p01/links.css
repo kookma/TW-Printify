@@ -1,0 +1,6 @@
+@media print {
+    a[href]:not([href^="#"]):after {
+        content: " (" attr(href) ")"; 
+        /* text-decoration: underline; */  /* if you want those links to be underlined in the print */
+    }
+}

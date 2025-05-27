@@ -1,0 +1,14 @@
+caption: {{$:/plugins/kookma/printify/language/SideBar/Profiles/Caption}}
+created: 20250525191622222
+modified: 20250525192741017
+tags: $:/tags/Printify/SideBar
+title: $:/plugins/kookma/printify/ui/SideBar/Profiles
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+
+<div class="tc-more-sidebar">
+<!---
+<$macrocall $name="tabs" tabsList="[printify.more.tabs[]]" default="$:/core/ui/MoreSideBar/All" state="$:/state/tab/moresidebar-printify" class="tc-vertical tc-sidebar-tabs-more" explicitState="$:/state/tab/moresidebar-printify"/>
+--> Profiles go here!
+</div>

@@ -1,0 +1,8 @@
+@media print {
+	/* hide extra element */
+	.tc-titlebar,       /* hide title and icons on title */
+	.tc-subtitle,       /* hide subtitle including date */
+	.tc-tags-wrapper,   /* hide tags */
+	.kk-utility-details /* hide source button  - Utility plugin*/
+	{ display:none; } 
+}

@@ -1,0 +1,13 @@
+created: 20250519053520242
+modified: 20250523062404287
+title: $:/plugins/kookma/printify/readme
+type: text/vnd.tiddlywiki
+
+; Printify
+Printify transforms your TiddlyWiki experience by bringing seamless, customizable, and professional-grade printing—ensuring every tiddler is beautifully structured and effortlessly formatted for any purpose.
+
+;Code and demo
+For learning plugin features, syntax, tutorial and examples see the plugin demo and code pages
+
+* Demo: https://kookma.github.io/TW-Printify/
+* Code: https://github.com/kookma/TW-Printify

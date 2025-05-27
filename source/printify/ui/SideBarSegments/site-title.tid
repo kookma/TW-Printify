@@ -1,0 +1,11 @@
+created: 20250525152924318
+modified: 20250525190916108
+tags: $:/tags/Printify/SideBarSegment
+title: $:/plugins/kookma/printify/ui/SideBarSegments/site-title
+type: text/vnd.tiddlywiki
+
+<h1 class="tc-site-title">
+
+<$transclude tiddler="$:/Printify/SiteTitle" mode="inline"/>
+
+</h1>

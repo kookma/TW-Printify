@@ -1,0 +1,34 @@
+created: 20250516085243289
+modified: 20250524192058533
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/printify/profiles/p01/dynamic
+type: text/vnd.tiddlywiki
+
+/* This stylesheet can use TiddlyWiki variables to create dynamic contents */
+@media print {
+	@page {
+		@top-left {
+			content: "My TiddlyWiki - Left \A Second line of text";
+		}
+
+		@top-center {
+			content: "Document Title Centered";
+		}
+
+		@top-right {
+			content: "Header - top right";
+		}
+
+		@bottom-left {
+			content: "Printed on:<<now>> " /* You can use dynamic date here */;
+		}
+
+		@bottom-center {
+			content: "© Your Name or Organization";
+		}
+
+		@bottom-right {
+			content: "Page " counter(page) " of " counter(pages);
+		}
+	}
+}

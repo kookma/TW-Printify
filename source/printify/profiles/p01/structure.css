@@ -1,0 +1,44 @@
+@media print {
+	@page {
+		size: A4;
+		margin: 30mm 20mm 25mm;
+		padding: 1.5em 0.5em;
+
+		@top-left {
+			border-bottom: 2px solid;
+			vertical-align: bottom;
+			padding-bottom:10px;		
+			
+		}
+
+		@top-center {
+			border-bottom: 2px solid;
+			vertical-align: bottom;
+			padding-bottom:10px;
+		}
+
+		@top-right {
+			border-bottom: 2px solid;
+			vertical-align: bottom;
+			padding-bottom:10px;			
+		}
+
+		@bottom-left {
+			border-top: 2px solid;
+			vertical-align: top;
+			padding-top:10px;
+		}
+
+		@bottom-center {
+			border-top: 2px solid;
+			vertical-align: top;
+			padding-top:10px;
+		}
+
+		@bottom-right {
+			border-top: 2px solid;
+			vertical-align: top;
+			padding-top:10px;
+		}
+	}
+}

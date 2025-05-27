@@ -1,0 +1,11 @@
+@media print {
+/* IMAGE PRINTING */
+  img {
+    max-width: 100%;       /* Scale images to fit page width */
+    height: auto;          /* Maintain aspect ratio */
+    page-break-inside: avoid; /* Avoid breaking images across pages */
+    break-inside: avoid;      /* Modern equivalent */
+    display: block;
+    margin: 0 auto 10mm auto; /* Center images and add bottom spacing */
+  }
+}

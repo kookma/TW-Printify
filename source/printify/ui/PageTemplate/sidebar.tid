@@ -1,0 +1,33 @@
+code-body: yes
+created: 20250525145154386
+modified: 20250525191047717
+tags: $:/tags/Printify/PageTemplate
+title: $:/plugins/kookma/printify/ui/PageTemplate/sidebar
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\define config-title()
+$:/config/SideBarSegments/Visibility/$(listItem)$
+\end
+
+<$scrollable fallthrough="no" class="tc-sidebar-scrollable">
+
+<div class="tc-sidebar-header">
+
+<$reveal state="$:/state/sidebar" type="match" text="yes" default="yes" retain="yes" animate="yes">
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/Printify/SideBarSegment]!has[draft.of]]" variable="listItem">
+
+<$reveal type="nomatch" state=<<config-title>> text="hide"  tag="div">
+
+<$transclude tiddler=<<listItem>> mode="block"/>
+
+</$reveal>
+
+</$list>
+
+</$reveal>
+
+</div>
+
+</$scrollable>

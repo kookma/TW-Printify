@@ -1,0 +1,8 @@
+caption: {{$:/plugins/kookma/printify/language/SideBar/PrintSet/Caption}}
+created: 20250524161740187
+modified: 20250525160943572
+tags: $:/tags/Printify/SideBar
+title: $:/plugins/kookma/printify/ui/SideBar/PrintSet
+type: text/vnd.tiddlywiki
+
+{{$:/core/ui/SideBar/Open}}

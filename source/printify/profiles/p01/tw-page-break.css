@@ -1,0 +1,5 @@
+/* https://talk.tiddlywiki.org/t/print-css-for-tiddlers/12489/9 */
+@media print {
+    .tc-tiddler-frame { break-after: page; }
+    .tc-tiddler-frame:last-of-type { break-after: avoid; }
+}

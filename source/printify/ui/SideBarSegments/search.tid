@@ -1,0 +1,7 @@
+created: 20250524163807630
+modified: 20250525190953795
+tags: $:/tags/Printify/SideBarSegment
+title: $:/plugins/kookma/printify/ui/SideBarSegments/search
+type: text/vnd.tiddlywiki
+
+{{$:/core/ui/SideBarSegments/search}}

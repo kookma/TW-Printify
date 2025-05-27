@@ -1,0 +1,23 @@
+@media print {
+	pre, code {
+		background: #f5f5f5 !important;   /* Light background for readability */
+		color: #222 !important;           /* Dark text for contrast */
+		font-family: "Courier New", Courier, monospace !important;
+		font-size: 10pt !important;
+		padding: 10px !important;
+		white-space: pre-wrap !important; /* Allows wrapping for long lines */
+		word-break: break-all !important; /* Prevents overflow */
+		box-shadow: none !important;      /* Remove any box-shadows */
+		border: none !important; /* Remove any border */
+	}
+
+	/* hide code button in TiddlyWiki plugins */
+	.kk-utility-code button {
+		display:none;
+	}
+}
+
+/* Ensure borders appear on all fragments 
+box-decoration-break: clone;
+-webkit-box-decoration-break: clone;
+*/

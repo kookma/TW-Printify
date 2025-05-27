@@ -1,0 +1,12 @@
+created: 20250524161205162
+modified: 20250525190939517
+original: $:/core/ui/SideBarSegments/tabs
+tags: $:/tags/Printify/SideBarSegment
+title: $:/plugins/kookma/printify/ui/SideBarSegments/tabs
+type: text/vnd.tiddlywiki
+
+<div class="tc-sidebar-lists tc-sidebar-tabs" role="region" aria-label={{$:/language/SideBar/Caption}}>
+
+<$macrocall $name="tabs" tabsList="[all[shadows+tiddlers]tag[$:/tags/Printify/SideBar]!has[draft.of]]" default="$:/plugins/kookma/printify/ui/SideBar/PrintSet" state="$:/state/tab/sidebar-printify" class="tc-sidebar-tabs-main" explicitState="$:/state/tab/sidebar-printify"/>
+
+</div>
