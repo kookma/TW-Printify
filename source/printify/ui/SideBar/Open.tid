@@ -1,0 +1,6 @@
+caption: {{$:/language/SideBar/Open/Caption}}
+tags: $:/tags/Printify/SideBar
+title: $:/plugins/kookma/printify/ui/SideBar/Open
+type: text/vnd.tiddlywiki
+
+{{$:/core/ui/SideBar/Open}}

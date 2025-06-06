@@ -1,0 +1,10 @@
+/* Static styles for Quick print profile */
+/* Example
+section[data-print-profile="quick"] .xx {display: none;}
+*/
+
+/*
+@media print {
+
+}
+*/

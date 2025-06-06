@@ -1,0 +1,17 @@
+/* These rules applied for all print profiles */
+
+@media print{
+	
+/*	.tc-sidebar-scrollable{
+		display: none;
+} */
+	.tc-story-river{
+		width: 100%;
+	}
+/* this is required when sidebar layout changes from fixed to fluid */
+	.tc-story-river .tc-tiddler-frame{
+		/* TODO: border: 1px dotted red;  For debug, remove later */
+		width: 100%;
+	}
+	
+}/* end of media print TODO: */

@@ -1,0 +1,10 @@
+/* These are settings for third party or official plugins and apply to all print profiles*/
+@media print {
+	/* hide extra element */
+	.kk-utility-details { /* hide source button  - Utility plugin*/
+		display:none; } 
+	.paliz-tab-set{ /* hide bottom smart tabs - Paliz/Thinkup plugin */
+		display: none;
+	}
+
+}

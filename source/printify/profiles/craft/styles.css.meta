@@ -1,0 +1,4 @@
+profile: craft
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/printify/profiles/craft/styles
+type: text/css

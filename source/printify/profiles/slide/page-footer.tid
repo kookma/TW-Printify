@@ -1,0 +1,29 @@
+code-body: yes
+profile: slide
+tags: $:/tags/Printify/Style
+title: $:/plugins/kookma/printify/profiles/slide/page-footer
+type: text/vnd.tiddlywiki
+
+@page{
+	/* you have set one by one, under @page it seems you cannot set several values at once */
+	@bottom-left {
+		content: "Printed on: <<now>> " /* You can use dynamic date here */;
+		border-top: 2px solid;
+		vertical-align: top;
+		padding-top:10px;
+	}
+
+	@bottom-center {
+		content: "Amirkabir University of Technology";
+		border-top: 2px solid;
+		vertical-align: top;
+		padding-top:10px;		
+	}
+
+	@bottom-right {
+		content: "Page " counter(page) " of " counter(pages);
+		border-top: 2px solid;
+		vertical-align: top;
+		padding-top:10px;
+	}
+}

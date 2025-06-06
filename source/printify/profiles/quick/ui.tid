@@ -1,0 +1,18 @@
+code-body: yes
+tags: 
+title: $:/plugins/kookma/printify/profiles/quick/ui
+type: text/vnd.tiddlywiki
+
+;Switch properties
+:<<switch-property "hide-tiddler-title" "Hide tiddler title">>
+:<<switch-property "hide-tiddler-subtitle" "Hide tiddler subtitle">>
+:<<switch-property "hide-tiddler-tagswrapper" "Hide tiddler tags wrapper">>
+:<<switch-property "hide-tiddler-titleicon" "Hide tiddler title icon">>
+:<<switch-property "add-page-break" "One tiddler per page (add page break)">>
+
+;Set appearance
+: <<set-property "font-family" "Font family">>
+: <<set-property "title-font-size" "Font size">>
+: <<set-property "body-font-size" "Font size for tiddler body">>
+
+<small>Note: Active TiddlyWiki theme settings will be used, if left empty.</small>

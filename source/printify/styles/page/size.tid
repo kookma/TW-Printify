@@ -1,0 +1,13 @@
+code-body: yes
+list-before: 
+profile: craft slide
+tags: $:/tags/Printify/Style
+title: $:/plugins/kookma/printify/styles/page/size
+type: text/vnd.tiddlywiki
+
+@page {
+	<%if [get.prop[page-size]]   %>size: <<get.prop page-size>>;<%endif%>
+	<%if [get.prop[page-margin]] %>margin: <<get.prop page-margin>>;<%endif%>
+	padding: 1.5em 0.5em;
+	color: navy;
+}

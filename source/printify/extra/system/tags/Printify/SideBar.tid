@@ -1,5 +1,3 @@
-created: 20250524164048134
-list: $:/plugins/kookma/printify/ui/SideBar/PrintSet $:/plugins/kookma/printify/ui/SideBar/Profiles $:/plugins/kookma/favorites/ui/sidebar/active-tab-printify $:/plugins/kookma/printify/ui/SideBar/More
-modified: 20250525191936616
+list: $:/plugins/kookma/printify/ui/SideBar/Open $:/plugins/kookma/printify/ui/SideBar/Profiles $:/plugins/kookma/printify/ui/SideBar/PrintSet $:/plugins/kookma/printify/ui/SideBar/Favorites $:/plugins/kookma/printify/ui/SideBar/More
 title: $:/tags/Printify/SideBar
 type: text/vnd.tiddlywiki

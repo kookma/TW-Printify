@@ -1,0 +1,22 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/printify/styles/dynamic-page
+type: text/vnd.tiddlywiki
+
+\import $:/plugins/kookma/printify/procedures/helper
+\function check.rule(property) [<profileTiddler>getindex<property>match[on]]
+\function get.prop(property) [<profileTiddler>getindex<property>]
+\function profile.name() [<profileTiddler>get[caption]lowercase[]]
+
+\procedure page-settings()
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/Printify/Style]contains:profile<profile.name>]">
+<$transclude $mode=block/>
+</$list>
+\end
+
+\whitespace trim
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock parameters fnprocdef conditional html
+
+/* work only if print layout is active */
+<%if [[$:/layout]get[text]match[$:/plugins/kookma/printify/layout/print]] %>
+	<<page-settings>>
+<%endif%>/* work only if print layout is active */

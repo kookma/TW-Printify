@@ -1,0 +1,15 @@
+/* Static styles for Slide print profile */
+@media print {
+	/* Hide TW elements on slide */
+	section[data-print-profile="slide"] .tc-subtitle, /* hide subtitle*/
+	section[data-print-profile="slide"] .tc-tags-wrapper, /*hide tags */
+	section[data-print-profile="slide"] .tc-tiddler-title-icon /* hide tiddler title icon */	
+	{
+		display: none;
+	}
+
+	/* Print each tiddler in one page */
+	section[data-print-profile="slide"] .tc-tiddler-frame { break-after: page; }
+	section[data-print-profile="slide"] .tc-tiddler-frame:last-of-type { break-after: avoid; }
+
+}

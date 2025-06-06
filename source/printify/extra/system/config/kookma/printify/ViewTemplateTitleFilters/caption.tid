@@ -1,0 +1,6 @@
+list-before: $:/config/ViewTemplateTitleFilters/default
+tags: $:/tags/ViewTemplateTitleFilter
+title: $:/config/kookma/printify/ViewTemplateTitleFilters/caption
+type: text/vnd.tiddlywiki
+
+[{$:/layout}match[$:/plugins/kookma/printify/layout/print]then[$:/config/Printify/Profile]get[text]lowercase[]match[slide]then[$:/plugins/kookma/printify/ui/ViewTemplate/Title]]

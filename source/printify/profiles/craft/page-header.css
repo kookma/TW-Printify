@@ -1,0 +1,32 @@
+@page{
+	/* you have set one by one, under @page it seems you cannot set several values at once */
+	@top-left {
+		content: "My TiddlyWiki - Left \A Second line of text";
+		white-space: pre;
+		line-height:1.4em;
+		font-size: 12pt;
+		border-bottom: 2pt solid;
+		vertical-align: bottom;
+		padding-bottom:10px;	
+	}
+
+	@top-center {
+		content: "Document Title Centered";
+		white-space: pre;
+		line-height:1.4em;
+		font-size: 12pt;
+		border-bottom: 2pt solid;
+		vertical-align: bottom;
+		padding-bottom:10px;	
+	}
+
+	@top-right {
+		content: "Header - top right";
+		white-space: pre;
+		line-height:1.4em;
+		font-size: 12pt;
+		border-bottom: 2pt solid;
+		vertical-align: bottom;
+		padding-bottom:10px;	
+	}
+}

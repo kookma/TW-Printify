@@ -1,14 +1,39 @@
 caption: {{$:/plugins/kookma/printify/language/SideBar/Profiles/Caption}}
-created: 20250525191622222
-modified: 20250525192741017
 tags: $:/tags/Printify/SideBar
 title: $:/plugins/kookma/printify/ui/SideBar/Profiles
 type: text/vnd.tiddlywiki
 
-\whitespace trim
+\import $:/plugins/kookma/printify/procedures/helper
+\import $:/plugins/kookma/printify/procedures/expandstyles
+<dl>
+<dt style="margin-bottom:10px;">
+Select a print profile
+</dt>
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/Printify/Profile]]">
+<dd title={{!!description}} style="margin-bottom:2px;">
+<$radio tiddler="$:/config/Printify/Profile" field="text" value={{!!caption}} default="quick">
+	<$text text={{{[{!!caption}titlecase[]addsuffix[ Print]]}}}/></$radio>
+</dd>
+</$list>
+</dl>
 
-<div class="tc-more-sidebar">
-<!---
-<$macrocall $name="tabs" tabsList="[printify.more.tabs[]]" default="$:/core/ui/MoreSideBar/All" state="$:/state/tab/moresidebar-printify" class="tc-vertical tc-sidebar-tabs-more" explicitState="$:/state/tab/moresidebar-printify"/>
---> Profiles go here!
+<hr/>
+
+<!-- profile settings UI -->
+
+; Active profile: <$text text={{{ [<profileTiddler>get[caption]titlecase[]addsuffix[ Print]] }}} />
+: <$text text={{{ [<profileTiddler>get[description]] }}} />
+: Config tiddler for direct edit (<$link to=<<profileTiddler>>/>)
+
+<$transclude $tiddler={{{[<profileTiddler>search-replace[config],[ui]]}}} $mode="block" />
+
+---
+
+''Advanced configuration''
+
+<div style="margin-left:40px">
+
+<$transclude $variable="expandable-stylesheets-list" styleFilter="[[$:/config/Printify/Profile]get[text]else[quick]!is[draft]] :map:flat[all[tiddlers+shadows]profile<currentTiddler>sort[]]" />
+
 </div>
+

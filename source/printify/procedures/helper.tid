@@ -1,0 +1,16 @@
+tags: 
+title: $:/plugins/kookma/printify/procedures/helper
+type: text/vnd.tiddlywiki
+
+\function profileTiddler() [all[tiddlers+shadows]tag[$:/tags/Printify/Profile]]:filter[get[caption]match{$:/config/Printify/Profile}] :else[[$:/plugins/kookma/printify/profiles/quick/config]]
+
+\procedure switch-property(thisIndex, thisLabel)
+<$checkbox tiddler=<<profileTiddler>> index=<<thisIndex>> checked="on" unchecked="off">
+<$text text=<<thisLabel>> />
+</$checkbox><br>
+\end
+
+\procedure set-property(thisIndex, thisLabel, thisTitle:"")
+<label class="kk-printify-label" title=<<thisTitle>>><$text text=<<thisLabel>>/></label>
+<$edit-text tiddler=<<profileTiddler>> index=<<thisIndex>> tag=input default="" placeholder="" class="kk-printify-input-txt"/><br>
+\end

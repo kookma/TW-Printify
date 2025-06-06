@@ -1,0 +1,14 @@
+/* applys to all print profiles */
+@media print {
+	a[href]:not([href^="#"])::after {
+		content: " (" attr(href) ") "; 
+		font-size: 0.9em;
+		color: gray;
+		/* if you want those links to be underlined in the print */
+		/* text-decoration: underline; */ 
+	}
+	
+	a[href]:not([href^="#"])::before {
+		content:none; /*remove icons */
+	}
+}

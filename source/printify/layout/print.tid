@@ -1,8 +1,6 @@
 code-body: yes
-created: 20250523070057342
 description: smart printing for TiddlyWiki
 icon: $:/core/images/print-button
-modified: 20250524172841164
 name: Printify
 tags: $:/tags/Layout
 title: $:/plugins/kookma/printify/layout/print

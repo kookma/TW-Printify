@@ -1,0 +1,11 @@
+caption: Favorites
+tags: $:/tags/Printify/SideBar
+title: $:/plugins/kookma/printify/ui/SideBar/Favorites
+type: text/vnd.tiddlywiki
+
+<%if [[$:/plugins/kookma/favorites]!is[missing]]
+    :filter[lookup:no[$:/config/Plugins/Disabled/]match[no]] %>
+{{$:/plugins/kookma/favorites/ui/sidebar/active-tab}}
+<% else %>
+ Favorite plugin is not installed or disabled.
+<%endif%>

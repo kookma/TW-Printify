@@ -1,0 +1,8 @@
+tags: 
+title: $:/plugins/kookma/printify/ui/ViewTemplate/Title
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<h2 class="tc-title" title={{$:/language/SystemTiddler/Tooltip}}>
+<$text text={{{ [<currentTiddler>get[caption]else{!!title}] }}}/>
+</h2>

@@ -1,0 +1,11 @@
+{
+    "font-family": "Cambria",
+    "title-font-size": "14px",
+    "body-font-size": "15px",
+    "page-size": "a4 portrait",
+    "page-margin": "25mm 14mm",
+    "hide-tiddler-subtitle": "on",
+    "hide-tiddler-tagswrapper": "on",
+    "hide-tiddler-titleicon": "on",
+    "add-page-break": "off"
+}

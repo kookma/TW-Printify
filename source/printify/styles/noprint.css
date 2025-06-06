@@ -1,0 +1,5 @@
+/* applys to all print profiles */
+@media print {
+	/* add to any element you like to remove from printing */
+	.no-print { display: none !important; }
+}

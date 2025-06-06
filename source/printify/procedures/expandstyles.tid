@@ -1,0 +1,35 @@
+title: $:/plugins/kookma/printify/procedures/expandstyles
+type: text/vnd.tiddlywiki
+
+\procedure expandable-stylesheets-list(styleFilter)
+\whitespace trim
+<$list filter=<<styleFilter>> >
+<$vars state=<<qualify "$:/state/printify">> >
+<$set name="state" value={{{ [<state>addsuffix<currentTiddler>] }}}>
+<$reveal type="match" state=<<state>> text="yes" tag="span">
+<$button set=<<state>> setTo="no" class="tc-btn-invisible">
+{{$:/core/images/down-arrow}}
+</$button>
+</$reveal>
+<$reveal type="nomatch" state=<<state>> text="yes" tag="span">
+<$button set=<<state>> setTo="yes" class="tc-btn-invisible">
+{{$:/core/images/right-arrow}}
+</$button>
+</$reveal>
+<$link>
+<$view field="title"/>
+</$link>
+<$reveal type="match" state=<<state>> text="yes" tag="div">
+<$set name="source" tiddler=<<currentTiddler>>>
+<$wikify name="styles" text=<<source>>>
+<$codeblock code=<<styles>> language="css"/>
+</$wikify>
+</$set>
+</$reveal>
+<br/>
+</$set>
+</$vars>
+</$list>
+\end
+
+<!-- taken from $:/snippets/peek-stylesheets -->

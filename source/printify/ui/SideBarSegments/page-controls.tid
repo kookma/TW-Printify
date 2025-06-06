@@ -1,5 +1,3 @@
-created: 20250524163717270
-modified: 20250525190849888
 tags: $:/tags/Printify/SideBarSegment
 title: $:/plugins/kookma/printify/ui/SideBarSegments/page-controls
 type: text/vnd.tiddlywiki
@@ -11,9 +9,10 @@ $:/core/ui/Buttons/print
 $:/core/ui/Buttons/close-all
 $:/core/ui/Buttons/control-panel
 $:/plugins/kookma/commander/ui/Buttons/open-commander
-$:/core/ui/Buttons/palette
 $:/core/ui/Buttons/full-screen
+$:/plugins/kookma/utility/ui/Buttons/edit-fields
 $:/core/ui/Buttons/layout
+:and[has[title]]
 \end
 
 <div class="tc-page-controls">

@@ -1,9 +1,8 @@
-created: 20250519053520245
-modified: 20250524194607554
 title: $:/plugins/kookma/printify/history
 type: text/vnd.tiddlywiki
 
 Full change log  https://kookma.github.io/TW-Printify/#ChangeLog
 
-* ''0.2.0'' -- 2020.03.12 -- first working release, beta candidate
+* ''0.7.0'' -- 2020.06.06 -- first public release
+* ''0.2.0'' -- 2020.05.24 -- beta candidate
 * ''0.1.0'' -- 2025.05.22 -- partial implementation, conceptualization

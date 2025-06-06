@@ -1,0 +1,10 @@
+/* Static styles for Craft print profile */
+/* Example
+section[data-print-profile="craft"] .xx {display: none;}
+*/
+
+/*
+@media print {
+
+}
+*/

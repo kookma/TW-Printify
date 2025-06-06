@@ -1,0 +1,9 @@
+/* Use for Printify itself like UI, not for printing */
+.kk-printify-label{
+	width:26em;
+	display: block;
+	margin-top:5px;
+}
+.kk-printify-input-txt{
+	min-width:50%;
+}

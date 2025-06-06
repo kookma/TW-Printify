@@ -1,0 +1,61 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/printify/styles/dynamic-tw
+type: text/vnd.tiddlywiki
+
+\import $:/plugins/kookma/printify/procedures/helper
+\function check.rule(property) [<profileTiddler>getindex<property>match[on]]
+\function get.prop(property) [<profileTiddler>getindex<property>]
+\function profile.name() [<profileTiddler>get[caption]lowercase[]]
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock parameters fnprocdef conditional
+
+/* work only if print layout is active */
+<%if [[$:/layout]get[text]match[$:/plugins/kookma/printify/layout/print]] %>
+/* Control TiddlyWiki Elements */
+@media print {
+/* hide tiddler title*/
+<%if [check.rule[hide-tiddler-title]] %>.tc-titlebar {display:none;}<%endif%>
+
+/* hide tiddler subtitle*/
+<%if [check.rule[hide-tiddler-subtitle]] %>.tc-subtitle {display:none;}<%endif%>
+
+/* hide tiddler tags-wrapper*/
+<%if [check.rule[hide-tiddler-tagswrapper]] %>.tc-tags-wrapper {display:none;}<%endif%>
+
+/* hide tiddler title-icon*/
+<%if [check.rule[hide-tiddler-titleicon]] %>.tc-tiddler-title-icon {display:none; }<%endif%>
+
+/* add page break: on tiddler per page */
+<%if [check.rule[add-page-break]] %>
+.tc-tiddler-frame { break-after: page; }
+.tc-tiddler-frame:last-of-type { break-after: avoid; }
+<%endif%>	
+
+/* set font-family */
+<%if [get.prop[font-family]] %>
+section[data-print-profile="<<profile.name>>"] {
+  --font-family: <<get.prop font-family>>; /* this traps invalid inputs */
+  font-family:var(--font-family);}
+<%endif%>
+
+/* set title-font-size */
+<%if [get.prop[title-font-size]] %>
+section[data-print-profile="<<profile.name>>"] {
+  --title-font-size: <<get.prop title-font-size>>; /* this traps invalid inputs */
+  font-size: var(--title-font-size);
+  line-height: calc(1.8 * var(--title-font-size) );	
+}
+<%endif%>
+
+/* set title-body-font-size */
+<%if [get.prop[body-font-size]] %>
+section[data-print-profile="<<profile.name>>"] .tc-single-tiddler-window .tc-tiddler-body,
+section[data-print-profile="<<profile.name>>"] .tc-tiddler-frame .tc-tiddler-body {
+  --body-font-size: <<get.prop body-font-size>>; /* this traps invalid inputs */
+  font-size: var(--body-font-size);
+  line-height: calc(1.46 * var(--body-font-size) );	
+}
+<%endif%>
+}
+
+<%endif%>/* work only if print layout is active */
