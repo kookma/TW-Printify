@@ -1,6 +1,6 @@
 {
     "title": "$:/plugins/kookma/printify",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "stability": "STABILITY_1_EXPERIMENTAL",
     "name": "Printify",
     "description": "Smart, seamless, and customizable printing for TiddlyWiki",
@@ -12,5 +12,5 @@
     "dependents": "",
     "plugin-type": "plugin",
     "core-version": ">=5.3.6",
-    "packaged-by": "Gatha on 14th June 2025, 22:14:10"
+    "packaged-by": "Gatha on 14th June 2025, 23:37:34"
 }

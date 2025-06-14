@@ -1,5 +1,6 @@
 caption: slide
 description: Presentation Mode: Print one tiddler per page in landscape for slides and handouts.
+list-after: $:/plugins/kookma/printify/profiles/craft/config
 tags: $:/tags/Printify/Profile
 title: $:/plugins/kookma/printify/profiles/slide/config
 type: application/json

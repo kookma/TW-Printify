@@ -1,5 +1,6 @@
 caption: eco
 description: Eco-friendly Mode:  Save paper and protect the earth.
+list-before: 
 tags: $:/tags/Printify/Profile
 title: $:/plugins/kookma/printify/profiles/eco/config
 type: application/json

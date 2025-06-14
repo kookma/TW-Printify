@@ -1,5 +1,6 @@
 caption: craft
 description: Professional Edition: Full customization for precise layout, style, and formatting control.
+list-after: $:/plugins/kookma/printify/profiles/quick/config
 tags: $:/tags/Printify/Profile
 title: $:/plugins/kookma/printify/profiles/craft/config
 type: application/json
