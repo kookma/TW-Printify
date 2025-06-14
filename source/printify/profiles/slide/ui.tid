@@ -1,15 +1,16 @@
 code-body: yes
-tags: 
+profile: slide
+tags: $:/tags/Printify/ProfileUI
 title: $:/plugins/kookma/printify/profiles/slide/ui
 type: text/vnd.tiddlywiki
 
 ;Set appearance
-: <<set-property "font-family" "Font family">>
+: <<set-property thisIndex:"font-family" thisLabel:"Font family">>
 : <<set-property "title-font-size" "Font size">>
 : <<set-property "body-font-size" "Font size for tiddler body">>
 
 <small>Note: Active TiddlyWiki theme settings will be used, if left empty.</small>
 
 ;Set page properties
-: <<set-property "page-size" "Page size and orientation">>
+: <<set-property thisIndex:"page-size" thisLabel:"Page size and orientation" thisTitle:"">>
 : <<set-property "page-margin" "Page margin">>

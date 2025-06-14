@@ -1,0 +1,5 @@
+title: Create New Print Profile
+type: text/vnd.tiddlywiki
+
+This interface helps to create a new user [[Print Profile|https://kookma.github.io/TW-Printify/#Printify%20Tutorial]].
+<$transclude $tiddler="$:/plugins/kookma/printify/procedures/createprofile" $mode=block/>

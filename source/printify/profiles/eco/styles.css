@@ -1,0 +1,22 @@
+/* Static styles for Eco print profile
+The main idea from: https://printstylesheet.dbushell.com/
+*/
+@media only print {
+	section[data-print-profile="eco"] {
+		* {
+			display: none;
+		}
+
+		&:after {
+			content: "🌱 Please protect the earth! \A Print only when necessary!";
+			white-space: pre;
+			display: block;
+			text-align: center;
+			font-size: 2em;
+			line-height:1.8;
+			margin-top: 5em;
+
+		}
+	}
+
+}

@@ -1,7 +1,7 @@
 {
-    "font-family": "Cambria, Constantia, Georgia, \"Times New Roman\", Times, serif",
-    "title-font-size": "25px",
-    "body-font-size": "24px",
     "page-size": "a4 landscape",
-    "page-margin": "10mm 30mm 20mm"
+    "page-margin": "10mm 30mm 20mm",
+    "title-font-size": "25px",
+    "body-font-size": "22px",
+    "font-family": "Cambria, Constantia, Georgia, \"Times New Roman\", Times, serif"
 }

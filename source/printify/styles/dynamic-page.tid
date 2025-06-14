@@ -7,8 +7,18 @@ type: text/vnd.tiddlywiki
 \function get.prop(property) [<profileTiddler>getindex<property>]
 \function profile.name() [<profileTiddler>get[caption]lowercase[]]
 
+
+\procedure page-size()
+<%if [get.prop[page-size]!is[blank]] [get.prop[page-margin]!is[blank]] %>
+@page {
+	<%if [get.prop[page-size]]   %>size: <<get.prop page-size>>;<%endif%>
+	<%if [get.prop[page-margin]] %>margin: <<get.prop page-margin>>;<%endif%>
+}
+<%endif%>
+\end
+
 \procedure page-settings()
-<$list filter="[all[tiddlers+shadows]tag[$:/tags/Printify/Style]contains:profile<profile.name>]">
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/Printify/ProfileStyle]contains:profile<profile.name>]">
 <$transclude $mode=block/>
 </$list>
 \end
@@ -18,5 +28,6 @@ type: text/vnd.tiddlywiki
 
 /* work only if print layout is active */
 <%if [[$:/layout]get[text]match[$:/plugins/kookma/printify/layout/print]] %>
+	<<page-size>>
 	<<page-settings>>
 <%endif%>/* work only if print layout is active */

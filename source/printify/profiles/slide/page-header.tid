@@ -1,3 +1,9 @@
+code-body: yes
+profile: slide
+tags: $:/tags/Printify/ProfileStyle
+title: $:/plugins/kookma/printify/profiles/slide/page-header
+type: text/vnd.tiddlywiki
+
 @page{
 	/* you have set one by one, under @page it seems you cannot set several values at once */
 /* remove comment to use	

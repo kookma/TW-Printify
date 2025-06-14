@@ -2,7 +2,8 @@ tags:
 title: $:/plugins/kookma/printify/procedures/helper
 type: text/vnd.tiddlywiki
 
-\function profileTiddler() [all[tiddlers+shadows]tag[$:/tags/Printify/Profile]]:filter[get[caption]match{$:/config/Printify/Profile}] :else[[$:/plugins/kookma/printify/profiles/quick/config]]
+\function profileTiddler() [all[tiddlers+shadows]tag[$:/tags/Printify/Profile]!is[draft]]:filter[get[caption]match{$:/config/Printify/Profile}] :else[[$:/plugins/kookma/printify/profiles/quick/config]]
+\function profileName()    [[$:/config/Printify/Profile]get[text]else[quick]!is[draft]]
 
 \procedure switch-property(thisIndex, thisLabel)
 <$checkbox tiddler=<<profileTiddler>> index=<<thisIndex>> checked="on" unchecked="off">
@@ -12,5 +13,7 @@ type: text/vnd.tiddlywiki
 
 \procedure set-property(thisIndex, thisLabel, thisTitle:"")
 <label class="kk-printify-label" title=<<thisTitle>>><$text text=<<thisLabel>>/></label>
+<$keyboard key="escape" actions='<$action-setfield $tiddler=<<profileTiddler>> $index=<<thisIndex>> />' >
 <$edit-text tiddler=<<profileTiddler>> index=<<thisIndex>> tag=input default="" placeholder="" class="kk-printify-input-txt"/><br>
+</$keyboard>
 \end

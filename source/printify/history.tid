@@ -3,6 +3,7 @@ type: text/vnd.tiddlywiki
 
 Full change log  https://kookma.github.io/TW-Printify/#ChangeLog
 
-* ''0.7.0'' -- 2020.06.06 -- first public release
-* ''0.2.0'' -- 2020.05.24 -- beta candidate
-* ''0.1.0'' -- 2025.05.22 -- partial implementation, conceptualization
+* ''0.8.0'' — 2020.06.14 — Improved documentation, polished code, and enhanced helper tools
+* ''0.7.0'' — 2020.06.06 — First public release
+* ''0.2.0'' — 2020.05.24 — Beta candidate version
+* ''0.1.0'' — 2020.05.22 — Initial partial implementation and concept development

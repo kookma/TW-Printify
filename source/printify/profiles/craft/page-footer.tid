@@ -1,6 +1,6 @@
 code-body: yes
 profile: craft
-tags: $:/tags/Printify/Style
+tags: $:/tags/Printify/ProfileStyle
 title: $:/plugins/kookma/printify/profiles/craft/page-footer
 type: text/vnd.tiddlywiki
 

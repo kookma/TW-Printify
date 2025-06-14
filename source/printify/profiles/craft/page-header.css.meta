@@ -1,5 +1,5 @@
 code-body: yes
 profile: craft
-tags: $:/tags/Printify/Style
+tags: $:/tags/Printify/ProfileStyle
 title: $:/plugins/kookma/printify/profiles/craft/page-header
 type: text/css

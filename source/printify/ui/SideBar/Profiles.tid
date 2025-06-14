@@ -16,7 +16,9 @@ Select a print profile
 </dd>
 </$list>
 </dl>
-
+<div style="margin-left:40px; margin-top:-10px; font-size: smaller;">
+<$link to="Create New Print Profile">Create New Profile</$link>
+</div>
 <hr/>
 
 <!-- profile settings UI -->
@@ -25,7 +27,7 @@ Select a print profile
 : <$text text={{{ [<profileTiddler>get[description]] }}} />
 : Config tiddler for direct edit (<$link to=<<profileTiddler>>/>)
 
-<$transclude $tiddler={{{[<profileTiddler>search-replace[config],[ui]]}}} $mode="block" />
+<$transclude $tiddler={{{ [all[tiddlers+shadows]tag[$:/tags/Printify/ProfileUI]profile<profileName>first[]] }}} $mode="block" /><!--first is used to prevent user misuse of UI-->
 
 ---
 
@@ -33,7 +35,7 @@ Select a print profile
 
 <div style="margin-left:40px">
 
-<$transclude $variable="expandable-stylesheets-list" styleFilter="[[$:/config/Printify/Profile]get[text]else[quick]!is[draft]] :map:flat[all[tiddlers+shadows]profile<currentTiddler>sort[]]" />
+<$transclude $variable="expandable-stylesheets-list" styleFilter="[all[tiddlers+shadows]profile<profileName>sort[]]" />
 
 </div>
 

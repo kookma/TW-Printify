@@ -1,0 +1,54 @@
+code-body: yes
+tags: 
+title: $:/plugins/kookma/printify/procedures/createprofile
+type: text/vnd.tiddlywiki
+
+\function title.string(base-title) "[<unusedtitle baseName:$(base-title)$>]" :and[substitute[]] :map[subfilter<currentTiddler>]
+
+
+\procedure get-property(thisIndex, thisLabel, thisTitle:"")
+	<label class="kk-printify-label" title=<<thisTitle>>><$text text=<<thisLabel>>/></label>
+	<$keyboard key="escape" actions='<$action-setfield $tiddler="$:/temp/printify/createprofile" $index=<<thisIndex>> />' >
+	<$edit-text tiddler="$:/temp/printify/createprofile" index=<<thisIndex>> tag=input default="" placeholder="" class="kk-printify-input-txt"/><br>
+	</$keyboard>	
+\end
+
+\procedure create-actions()
+	<$action-sendmessage $message="tm-new-tiddler" title={{{ [title.string<config-title>] }}} tags="$:/tags/Printify/Profile"
+	                     type="application/json" caption=<<profile-name>> description=<<profile-desc>> />
+	<$action-sendmessage $message="tm-new-tiddler" title={{{ [title.string<ui-title>] }}} tags="$:/tags/Printify/ProfileUI"
+	                     type="" profile=<<profile-name>> code-body="yes" text={{{ [[$:/plugins/kookma/printify/profiles/quick/ui]get[text]] }}}/>
+	<$action-sendmessage $message="tm-new-tiddler" title={{{ [title.string<dstyles-title>] }}} tags="$:/tags/Printify/ProfileStyle"
+	                     type="" profile=<<profile-name>> code-body="yes" text="/* profile dynamic style goes here */"/>													 
+	<$action-sendmessage $message="tm-new-tiddler" title={{{ [title.string<styles-title>] }}} tags="$:/tags/Stylesheet"
+	                     type="text/css" profile=<<profile-name>> text={{{ [[$:/plugins/kookma/printify/profiles/quick/styles]get[text]search-replace[quick],<profile-name>] }}}/>		
+\end
+
+<!-- The interface -->
+<<get-property "new-profile-name" "Enter the profile name">>
+<<get-property "new-profile-desc" "Enter the profile description">>
+
+<$let profile-name=  {{{ [[$:/temp/printify/createprofile]getindex[new-profile-name]lowercase[]] }}}
+      profile-desc=  {{{ [[$:/temp/printify/createprofile]getindex[new-profile-desc]] }}}
+			user-prefix=   {{{ [[$:/temp/printify/createprofile]getindex[profile-title-prefix]] }}}
+      title-prefix=  {{{ [[user/printify/profiles]] [<profile-name>] :and[join[/]] }}}
+			config-title=  {{{ [<title-prefix>addsuffix[/config]] }}}
+			ui-title =     {{{ [<title-prefix>addsuffix[/ui]] }}}
+			dstyles-title= {{{ [<title-prefix>addsuffix[/dynamic-styles]] }}}			
+			styles-title=  {{{ [<title-prefix>addsuffix[/static-styles]] }}}
+
+>
+
+<$button actions=<<create-actions>> disabled={{{ [<profile-name>trim[]is[blank]then[yes]] }}}>
+Create Profile					 
+</$button>
+<%if [<profile-name>trim[]!is[blank]] %>
+
+For the new ''<$text text={{{[<profile-name>titlecase[]addsuffix[ Print]]}}}/>'' profile, these tiddlers will be created:
+
+* <<config-title>>
+* <<ui-title>>
+* <<styles-title>>
+* <<dstyles-title>>
+<%endif%>
+</$let>
